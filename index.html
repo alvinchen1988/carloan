@@ -16,71 +16,67 @@
     <link href="style/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <div class="container">
+    <div class="title-container">
         <h1>Car Finance Calculator</h1>
+    </div>
+    <div class="container">
+
         <div class="row">
             <div class="col-lg-12">
                 <div class="section">
                     <h3 class="section-title">What is your credit rating like?</h3>
                     <div id="credit-rating" class="btn-group" data-toggle="buttons"></div>
                 </div>
-                <div class="section">
+                <div class="section" style="border-bottom: 0px; padding-bottom: 0;">
                     <h3 class="section-title">How much do you want to borrow?</h3>
                     <div class="credit-slider">
                         <div class="row">
-                            <div class="col-lg-2">
-                                <a href="#" class="control control-left">
-                                    <span class="control-value"></span>
-                                    <span class="control-sign">-</span>
-                                </a>
+
+                            <div class="col-lg-7">
+                                <div class="slider-container">
+                                    <div id="credit-amount-slider"></div>
+                                </div>
                             </div>
-                            <div class="col-lg-8">
-                                <label class="credit-amount label label-danger"></label>
-                                <div id="credit-amount-slider"></div>
+
+                            <div class="col-lg-5">
+                                <label class="credit-amount label btn"></label>
                             </div>
-                            <div class="col-lg-2">
-                                <a href="#" class="control control-right">
-                                    <span class="control-value"></span>
-                                    <span class="control-sign">+</span>
-                                </a>
-                            </div>
+
                         </div>
                     </div>
                 </div>
-                <div class="section">
+                <div class="section" style="border-bottom: 0px; padding-bottom: 0;">
                     <h3 class="section-title">How long do you want to borrow it for?</h3>
                     <div class="credit-length-slider">
                         <div class="row">
-                            <div class="col-lg-2">
-                                <a href="#" class="control control-left">
-                                    <span class="control-value"></span>
-                                    <span class="control-sign">-</span>
-                                </a>
+                       
+                            <div class="col-lg-7">
+                                <div class="slider-container">
+                                    <div id="credit-length-slider"></div>
+                                </div>
                             </div>
-                            <div class="col-lg-8">
-                                <label class="credit-length label label-danger"></label>
-                                <div id="credit-length-slider"></div>
+
+                            <div class="col-lg-5">
+                                <label class="credit-length label btn"></label>
                             </div>
-                            <div class="col-lg-2">
-                                <a href="#" class="control control-right">
-                                    <span class="control-value"></span>
-                                    <span class="control-sign">+</span>
-                                </a>
-                            </div>
+
                         </div>
                     </div>
                 </div>
                 <div class="summary">
-                    <h3>Car finance calculator summary</h3>
-                    Borrowing <span class="credit-amount"></span>
-                    <br>
-                    over <span class="credit-length"></span> will
-                    <br>
-                    cost you <span class="monthly-payment"></span> per
-                    month
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <h3 class="section-title">Your monthly payment is:</h3>
+                        </div>
+                        <div class="col-lg-5">
+                            <label class="credit-length label btn monthly-payment"></label>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <p class="note">*The calculation is based on the information you provide and is for illustrative and general information purposes only. This should not be relied upon as specific financial or other advice.</p>
     </div>
 
 

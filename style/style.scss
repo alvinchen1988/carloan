@@ -5,13 +5,16 @@ $red: #b5151b;
 /*End of Colors*/
 
 body{
-  background-color:#ddd;
+  background-color:#fff;
   text-align: center;
+  color: #333;
+  padding-bottom: 20px;
 }
 
 h1{
   text-transform: uppercase;
   color:$inactive-color;
+  font-size: 33px;
 }
 
 .control{
@@ -66,6 +69,7 @@ h1{
 
     &.active{
       background-color: $main_color;
+      color: #fff;
     }
 
     &:focus{
@@ -85,13 +89,9 @@ h1{
 .summary{
   font-size:24px;
   line-height: 28px;
-  color:$inactive-color;
-  padding:50px 0;
-
-  h3{
-    margin:0 0 20px;
-    color:$main_color;
-  }
+  // color:$inactive-color;
+  padding:10px 0;
+  border-bottom: 1px solid #d5d5d5;
 
   span{
     color:black;
@@ -114,11 +114,132 @@ h1{
 
 //Section
 .section{
-  padding: 50px 0;
+  padding: 40px 0;
   border-bottom:1px solid #d5d5d5;
 }
 
 .section-title{
   text-align:left;
   margin-top:0;
+  margin-bottom: 25px;
+}
+
+
+
+//alvin styles
+
+.btn{
+  border-radius: 0;
+  padding: 12px 24px;
+}
+
+.title-container{
+    
+    background-color: #64b9e2;
+    h1{
+    margin: 0;
+    height: 80px;
+    line-height: 80px;
+    color: #fff;
+  }
+}
+
+#credit-rating .btn{
+  background-color: #c3c3c3;
+    border-width: 0;
+    letter-spacing: 1px;
+    color: #333;
+}
+
+#credit-rating .btn + .btn{
+  border-left-width: 3px;
+  border-color: #fff;
+}
+
+#credit-amount-slider, #credit-length-slider{
+  border-radius: 0 !important;
+  height: 25px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.ui-corner-all{
+  border-radius: 0 !important;
+}
+
+.ui-slider .ui-slider-handle{
+  width: 2.5em;
+  height: 2.4em;
+  top: -0.45em;
+  border-radius: 10px !important;
+
+  &:before, &:after{
+
+    display: inline-block;
+    content: "";
+    width: 5px;
+    height: 20px;
+    background-color: #fff;
+    position: absolute;
+  }
+
+  &:before{
+    left: 22px;
+    top: 9px;
+  }
+
+  &:after{
+    top: 9px;
+    left: 11px;
+  }
+}
+
+.credit-amount.btn, .credit-length.btn{
+  background-color: #fff;
+  color: #666;
+  border: 2px solid #c3c3c3;
+}
+
+.summary h3{
+  margin-top: 20px;
+  text-align: right;
+}
+
+.btn.monthly-payment{
+  border-color: #039be5;
+  color: #333;
+}
+
+.slider-container{
+  position: relative;
+}
+
+.slider-container{
+
+
+  &:before, &:after{
+    display: inline-block;
+    position: absolute;
+    color: #64b9e2;
+    font-size: 30px;
+    top: -12px;
+  }
+
+  &:before{
+    content: "–";
+    left: 0;
+
+  }
+
+  &:after{
+    content: "+";
+    right: -35px;
+  }
+}
+
+.note{
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+  text-align: left;
+  font-size: 12px;
 }
