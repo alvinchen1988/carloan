@@ -1,0 +1,87 @@
+/*Colors*/
+/*End of Colors*/
+body {
+  background-color: #ddd;
+  text-align: center; }
+
+h1 {
+  text-transform: uppercase;
+  color: #7d7d7d; }
+
+.control {
+  display: none;
+  text-decoration: none;
+  color: black; }
+  .control:hover, .control:focus {
+    text-decoration: none; }
+  .control .control-value {
+    display: block; }
+  .control .control-sign {
+    display: block;
+    background-color: #7d7d7d;
+    color: #039be5;
+    text-align: center;
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+    font-size: 24px;
+    line-height: 26px; }
+
+.control-left {
+  text-align: left; }
+  .control-left .control-sign {
+    float: left; }
+
+.control-right {
+  text-align: right; }
+  .control-right .control-sign {
+    float: right; }
+
+#credit-rating {
+  width: 100%; }
+  #credit-rating button {
+    background-color: #7d7d7d;
+    color: white;
+    text-transform: capitalize;
+    width: 20%; }
+    #credit-rating button.active {
+      background-color: #039be5; }
+    #credit-rating button:focus {
+      outline: none; }
+
+.label {
+  display: block;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 10px auto;
+  width: 200px; }
+
+.summary {
+  font-size: 24px;
+  line-height: 28px;
+  color: #7d7d7d;
+  padding: 25px 0; }
+  .summary h3 {
+    margin: 0 0 20px;
+    color: #039be5; }
+  .summary span {
+    color: black; }
+
+.ui-slider-range {
+  background: #7d7d7d; }
+
+.ui-slider-handle {
+  background: #039be5 !important;
+  border: none !important; }
+  .ui-slider-handle:focus {
+    outline: none; }
+
+.section {
+  padding: 25px 0;
+  border-bottom: 1px solid #d5d5d5; }
+
+.section-title {
+  text-align: left;
+  margin-top: 0; }
+
+/*# sourceMappingURL=style.css.map */

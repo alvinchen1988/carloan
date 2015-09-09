@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Finance Calculator</title>
+
+    <!-- Bootstrap 3 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- end of Bootstrap 3 -->
+
+    <!-- jQueryUI -->
+    <link href="https://code.jquery.com/ui/1.10.4/themes/black-tie/jquery-ui.css" rel="stylesheet" type="text/css">
+    <!-- end of jQueryUI -->
+
+    <link href="style/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <h1>Car Finance Calculator</h1>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section">
+                    <h3 class="section-title">What is your credit rating like?</h3>
+                    <div id="credit-rating" class="btn-group" data-toggle="buttons"></div>
+                </div>
+                <div class="section">
+                    <h3 class="section-title">How much do you want to borrow?</h3>
+                    <div class="credit-slider">
+                        <div class="row">
+                            <div class="col-lg-2">
+                                <a href="#" class="control control-left">
+                                    <span class="control-value"></span>
+                                    <span class="control-sign">-</span>
+                                </a>
+                            </div>
+                            <div class="col-lg-8">
+                                <label class="credit-amount label label-danger"></label>
+                                <div id="credit-amount-slider"></div>
+                            </div>
+                            <div class="col-lg-2">
+                                <a href="#" class="control control-right">
+                                    <span class="control-value"></span>
+                                    <span class="control-sign">+</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <h3 class="section-title">How long do you want to borrow it for?</h3>
+                    <div class="credit-length-slider">
+                        <div class="row">
+                            <div class="col-lg-2">
+                                <a href="#" class="control control-left">
+                                    <span class="control-value"></span>
+                                    <span class="control-sign">-</span>
+                                </a>
+                            </div>
+                            <div class="col-lg-8">
+                                <label class="credit-length label label-danger"></label>
+                                <div id="credit-length-slider"></div>
+                            </div>
+                            <div class="col-lg-2">
+                                <a href="#" class="control control-right">
+                                    <span class="control-value"></span>
+                                    <span class="control-sign">+</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="summary">
+                    <h3>Car finance calculator summary</h3>
+                    Borrowing <span class="credit-amount"></span>
+                    <br>
+                    over <span class="credit-length"></span> will
+                    <br>
+                    cost you <span class="monthly-payment"></span> per
+                    month
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- end of jQuery -->
+    <!-- jQueryUI -->
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <!-- end of jQueryUI -->
+    <!-- Bootstrap 3 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- end of Bootstrap 3 -->
+    <script src="js/calculator.js"></script>
+</body>
+</html>

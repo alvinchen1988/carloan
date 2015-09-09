@@ -1,0 +1,124 @@
+/*Colors*/
+$main_color: #039be5;
+$inactive-color: #7d7d7d;
+$red: #b5151b;
+/*End of Colors*/
+
+body{
+  background-color:#ddd;
+  text-align: center;
+}
+
+h1{
+  text-transform: uppercase;
+  color:$inactive-color;
+}
+
+.control{
+  display:none;
+  text-decoration: none;
+  color:black;
+
+  &:hover, &:focus{
+    text-decoration: none;
+  }
+
+  .control-value{
+    display:block;
+  }
+
+  .control-sign{
+    display:block;
+    background-color: $inactive-color;
+    color:$main_color;
+    text-align:center;
+    border-radius:15px;
+    width:30px;
+    height:30px;
+    font-size:24px;
+    line-height: 26px;
+  }
+}
+
+.control-left{
+  text-align:left;
+
+  .control-sign{
+    float:left;
+  }
+}
+.control-right{
+  text-align: right;
+
+  .control-sign{
+    float:right;
+  }
+}
+
+#credit-rating{
+  width:100%;
+
+  button{
+    background-color: $inactive-color;
+    color:white;
+    text-transform: capitalize;
+    width:20%;
+
+    &.active{
+      background-color: $main_color;
+    }
+
+    &:focus{
+      outline:none;
+    }
+  }
+}
+
+.label{
+  display: block;
+  font-weight:bold;
+  font-size: 20px;
+  margin:10px auto;
+  width:200px;
+}
+
+.summary{
+  font-size:24px;
+  line-height: 28px;
+  color:$inactive-color;
+  padding:50px 0;
+
+  h3{
+    margin:0 0 20px;
+    color:$main_color;
+  }
+
+  span{
+    color:black;
+  }
+}
+
+//Slider
+.ui-slider-range{
+  background: $inactive-color;
+}
+
+.ui-slider-handle{
+  background: $main_color !important;
+  border:none !important;
+
+  &:focus{
+    outline:none;
+  }
+}
+
+//Section
+.section{
+  padding: 50px 0;
+  border-bottom:1px solid #d5d5d5;
+}
+
+.section-title{
+  text-align:left;
+  margin-top:0;
+}
