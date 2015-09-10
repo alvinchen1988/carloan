@@ -4,6 +4,8 @@ $inactive-color: #7d7d7d;
 $red: #b5151b;
 /*End of Colors*/
 
+
+.btn-group-vertical>.btn.active, .btn-group-vertical>.btn:active, .btn-group-vertical>.btn:focus, .btn-group-vertical>.btn:hover, .btn-group>.btn.active, .btn-group>.btn:active, .btn-group>.btn:focus, .btn-group>.btn:hover {z-index: 0};
 body{
   background-color:#fff;
   text-align: center;
@@ -14,7 +16,7 @@ body{
 h1{
   text-transform: uppercase;
   color:$inactive-color;
-  font-size: 33px;
+  font-size: 22px;
 }
 
 .control{
@@ -75,6 +77,7 @@ h1{
     &:focus{
       outline:none;
     }
+
   }
 }
 
@@ -90,7 +93,7 @@ h1{
   font-size:24px;
   line-height: 28px;
   // color:$inactive-color;
-  padding:10px 0;
+  padding:20px 0;
   border-bottom: 1px solid #d5d5d5;
 
   span{
@@ -114,14 +117,15 @@ h1{
 
 //Section
 .section{
-  padding: 40px 0;
+  padding: 20px 0;
   border-bottom:1px solid #d5d5d5;
 }
 
 .section-title{
   text-align:left;
   margin-top:0;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
 
@@ -138,8 +142,8 @@ h1{
     background-color: #64b9e2;
     h1{
     margin: 0;
-    height: 80px;
-    line-height: 80px;
+    height: 50px;
+    line-height: 50px;
     color: #fff;
   }
 }
@@ -149,18 +153,30 @@ h1{
     border-width: 0;
     letter-spacing: 1px;
     color: #333;
+
+    @media (max-width: 510px){
+      font-size: 11px;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
 }
 
 #credit-rating .btn + .btn{
   border-left-width: 3px;
   border-color: #fff;
+
+  &:hover{
+      border-left-width: 3px;
+  border-color: #fff; 
+  }
 }
 
 #credit-amount-slider, #credit-length-slider{
   border-radius: 0 !important;
   height: 25px;
   margin-top: 20px;
-  margin-left: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .ui-corner-all{
@@ -198,6 +214,7 @@ h1{
   background-color: #fff;
   color: #666;
   border: 2px solid #c3c3c3;
+  display: inline-block;
 }
 
 .summary h3{
@@ -233,7 +250,13 @@ h1{
 
   &:after{
     content: "+";
-    right: -35px;
+    right: 0px;
+  }
+}
+
+.credit-slider, .credit-length-slider, .summary {
+  .col-lg-4{
+    text-align: right;
   }
 }
 
@@ -242,4 +265,12 @@ h1{
   margin-top: 20px;
   text-align: left;
   font-size: 12px;
+  color: #555;
+  margin-left: 25px;
+}
+
+@media (max-width: 1199px){
+  .sm-padding{
+    padding-right: 65px;
+  }
 }
