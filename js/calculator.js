@@ -33,7 +33,7 @@
         CreditLength: 36,
         CreditLengthMin: 12,
         CreditLengthMax: 96,
-	CreditLengthInterval: 3
+	    CreditLengthInterval: 3
     }
 
 
@@ -73,13 +73,13 @@
     //Updates credit amount view
     function updateCreditAmount(amount){
         FinanceCalculator.CreditAmount = amount;
-        $('.credit-amount').text('$' + numberFormat(FinanceCalculator.CreditAmount));
+        $('.credit-amount').val(FinanceCalculator.CreditAmount);
     }
 
     //Updates credit length view
     function updateCreditLength(length){
         FinanceCalculator.CreditLength = length;
-        $('.credit-length').text(FinanceCalculator.CreditLength + ' months');
+        $('.credit-length').val(FinanceCalculator.CreditLength);
     }
 
 
@@ -115,6 +115,7 @@
             updatePayment();
         });
 
+
         /////////Credit Amount Slider//////////
         //Credit Amount slider
         $('#credit-amount-slider').slider({
@@ -138,7 +139,7 @@
             var creditSlider = $('#credit-amount-slider');
             var currentValue = creditSlider.slider('value');
 
-            if(currentValue != FinanceCalculator.CreditAmountMin && currentValue != FinanceCalculator.CreditAmountMax ){
+            // if(currentValue != FinanceCalculator.CreditAmountMin && currentValue != FinanceCalculator.CreditAmountMax ){
 
                 if($(this).hasClass('control-left')){
                     creditSlider.slider('value', currentValue - FinanceCalculator.CreditAmountInterval );
@@ -146,6 +147,36 @@
                 else if($(this).hasClass('control-right')){
                     creditSlider.slider('value', currentValue + FinanceCalculator.CreditAmountInterval );
                 }
+
+            // }
+        });
+
+
+        $('.credit-amount').keyup(function(){
+            console.log($(this).val());
+
+             if(isNaN(parseInt($(this).val()))){
+                 
+                  console.log('error');
+                $('.monthly-payment').text('enter a number');
+            }else{
+                  console.log('sss');
+                   updateCreditAmount($(this).val());
+                    updatePayment();
+            }   
+        });
+
+        $('.credit-length').keyup(function(){
+            console.log($(this).val());
+          
+            if(isNaN(parseInt($(this).val()))){
+                 
+                  console.log('error');
+                $('.monthly-payment').text('enter a number');
+            }else{
+                  console.log('sss');
+                  updateCreditLength($(this).val());
+                  updatePayment();
 
             }
         });
@@ -156,6 +187,9 @@
         $('.credit-slider .control-right').find('.control-value').text('$' + numberFormat(FinanceCalculator.CreditAmountMax)); //Credit Slider Max
 
         //////////End of Credit Amount Slider//////////
+
+
+
 
         //////////Credit Length Slider//////////
         //Credit Length slider
@@ -175,24 +209,26 @@
             }
         });
         //Control bindings
+          
         $('.credit-length-slider .control').click(function(){
             var creditLengthSlider = $('#credit-length-slider');
-            var currentValue = creditLengthSlider.slider('value');
+            var currentLengthValue = creditLengthSlider.slider('value');
 
-            if(currentValue != FinanceCalculator.CreditLengthMin && currentValue != FinanceCalculator.CreditLengthMax ){
+            // if(currentLengthValue != FinanceCalculator.CreditLengthMin && currentLengthValue != FinanceCalculator.CreditLengthMax ){
 
+                // console.log('hi');
                 if($(this).hasClass('control-left')){
-                    creditLengthSlider.slider('value', currentValue - 1 );
+                    creditLengthSlider.slider('value', currentLengthValue - FinanceCalculator.CreditLengthInterval);
                 }
                 else if($(this).hasClass('control-right')){
-                    creditLengthSlider.slider('value', currentValue + 1 );
+                    creditLengthSlider.slider('value', currentLengthValue + FinanceCalculator.CreditLengthInterval);
                 }
 
-            }
+            // }
         });
 
         //Initialize values
-        updateCreditLength($( "#credit-length-slider" ).slider( "value" )); //Credit Length
+        updateCreditLength($("#credit-length-slider").slider( "value" )); //Credit Length
         $('.credit-length-slider .control-left').find('.control-value').text(FinanceCalculator.CreditLengthMin + ' months'); //Credit Length Slider Min
         $('.credit-length-slider .control-right').find('.control-value').text(FinanceCalculator.CreditLengthMax + ' months'); //Credit Length Slider Max
 
@@ -204,7 +240,7 @@
 
     PopulateCalculator();
 
-
+    // $('.credit-amount.btn').before('$');
 
 
 }());

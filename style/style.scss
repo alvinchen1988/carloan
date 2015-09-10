@@ -19,47 +19,6 @@ h1{
   font-size: 22px;
 }
 
-.control{
-  display:none;
-  text-decoration: none;
-  color:black;
-
-  &:hover, &:focus{
-    text-decoration: none;
-  }
-
-  .control-value{
-    display:block;
-  }
-
-  .control-sign{
-    display:block;
-    background-color: $inactive-color;
-    color:$main_color;
-    text-align:center;
-    border-radius:15px;
-    width:30px;
-    height:30px;
-    font-size:24px;
-    line-height: 26px;
-  }
-}
-
-.control-left{
-  text-align:left;
-
-  .control-sign{
-    float:left;
-  }
-}
-.control-right{
-  text-align: right;
-
-  .control-sign{
-    float:right;
-  }
-}
-
 #credit-rating{
   width:100%;
 
@@ -210,11 +169,12 @@ h1{
   }
 }
 
-.credit-amount.btn, .credit-length.btn{
+.credit-amount.btn, .credit-length.btn, .monthly-payment.btn{
   background-color: #fff;
   color: #666;
   border: 2px solid #c3c3c3;
   display: inline-block;
+
 }
 
 .summary h3{
@@ -234,26 +194,28 @@ h1{
 .slider-container{
 
 
-  &:before, &:after{
+  .control{
     display: inline-block;
     position: absolute;
     color: #64b9e2;
     font-size: 30px;
     top: -12px;
+    cursor: pointer;
   }
 
-  &:before{
-    content: "–";
+  .control-left{
     left: 0;
 
   }
 
-  &:after{
-    content: "+";
+  .control-right{
     right: 0px;
   }
 }
 
+.control:hover{
+  text-decoration: none;
+}
 .credit-slider, .credit-length-slider, .summary {
   .col-lg-4{
     text-align: right;
@@ -269,8 +231,46 @@ h1{
   margin-left: 25px;
 }
 
+
+.sign-mark{
+  position: absolute;
+  right: 65px;
+  top: 27px;
+  font-weight: bold;
+  color: #666;
+  font-size: 16px;
+}
+
+.sign-mark.dollar{
+  right: 160px;
+  font-size: 20px;
+  top: 22px;
+}
+
+.credit-length.btn{
+  padding-right: 111px;
+}
+
+.credit-amount.btn{
+  padding-left: 60px;
+  text-align: left;
+}
+
+.credit-length.btn{
+  padding-left: 40px;
+  text-align: left;
+}
+
 @media (max-width: 1199px){
   .sm-padding{
     padding-right: 65px;
+  }
+
+  .sign-mark.dollar{
+    right: 206px;
+  } 
+
+  .sign-mark{
+    right: 115px;
   }
 }
